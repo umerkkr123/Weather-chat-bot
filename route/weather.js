@@ -3,7 +3,7 @@ require('dotenv').config();
 const axios = require('axios');
 
 const weatherRouter = async (req, res) => {
-    console.log('req.body', req.body);
+    // console.log('req.body', req.body);
 
     try {
         const intent = req.body.queryResult?.intent?.displayName;
