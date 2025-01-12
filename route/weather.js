@@ -38,6 +38,7 @@ const weatherRouter = async (req, res) => {
     } catch (error) {
         console.error('Error:', error);
         res.send({
+            text :req.body,
             fulfillmentText: 'Sorry, I encountered an error while fetching the weather information.'
         });
     }
