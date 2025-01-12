@@ -3,6 +3,7 @@ require('dotenv').config();
 const axios = require('axios');
 
 const weatherRouter = async (req, res) => {
+    console.log('req.body', req.body)
     try {
         const intent = (req.body.queryResult?.intent?.displayName !== undefined)
             ? req.body.queryResult.intent.displayName
@@ -38,8 +39,7 @@ const weatherRouter = async (req, res) => {
     } catch (error) {
         console.error('Error:', error);
         res.send({
-            // text :req.body,
-            fulfillmentText: req.body
+            fulfillmentText: 'Sorry, I encountered an error while fetching the weather information.'
         });
     }
 }
