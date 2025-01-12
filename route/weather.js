@@ -10,7 +10,7 @@ const weatherRouter = async (req, res) => {
             : req.body.intent;
 
         const city = (req.body.queryResult?.parameters !== undefined)
-            ? req.body.queryResult.parameters.city
+            ? req.body.queryResult.parameters.geo-city
             : req.body.city;
         let responseText = '';
 
